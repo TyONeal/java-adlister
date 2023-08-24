@@ -26,7 +26,7 @@ public class HelloWorldServlet extends HttpServlet {
 
         pageCounter++;
 
-        if(resetCounter == "reset") {
+        if(Objects.equals(resetCounter, "reset")) {
             pageCounter = 0;
         }
 
