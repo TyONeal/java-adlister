@@ -11,15 +11,10 @@
     <title>Guess Game</title>
 </head>
 <body>
-
 <h1>Let's play a game! Guess a number between 1 and 3!</h1>
-
 <form method="post" action="/guess">
     <input type="text" name="playerGuess">
     <button type="submit">Guess!</button>
 </form>
-
-
-
 </body>
 </html>

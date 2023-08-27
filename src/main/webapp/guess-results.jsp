@@ -12,7 +12,6 @@
     <title>Guess Results</title>
 </head>
 <body>
-
 <c:choose>
     <c:when test="${guess == 2}">
         <h1>You Win!</h1>
@@ -21,8 +20,5 @@
         <h1>You Lose!</h1>
     </c:otherwise>
 </c:choose>
-
-
-
 </body>
 </html>

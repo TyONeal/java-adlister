@@ -8,11 +8,10 @@ import java.io.IOException;
 @WebServlet ("/incorrect")
 
 public class GuessLoseServlet extends HttpServlet {
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int guess = Integer.parseInt(request.getParameter("guess"));
         request.setAttribute("guess", guess);
-
         request.getRequestDispatcher("/guess-results.jsp").forward(request, response);
-
     }
 }
