@@ -76,6 +76,8 @@
 
     <label for="address-select">Where is this pizza going?</label>
     <input type="text" id="address-select" name="address-select">
+
+    <button type="submit">Place Order</button>
 </form>
 </body>
 </html>

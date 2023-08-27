@@ -10,8 +10,8 @@ public class PizzaOrderServlet extends HttpServlet {
 
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse rep) {
-
+    protected void doGet(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
+        req.getRequestDispatcher("/pizza-order.jsp").forward(req,rep);
     }
 
     @Override
@@ -22,7 +22,7 @@ public class PizzaOrderServlet extends HttpServlet {
 
         String[] toppingsArray = req.getParameterValues("toppings");
 
-        String address = req.getParameter("addressSelect");
+        String address = req.getParameter("address-select");
 
         System.out.println("Selected Crust: " + crust);
         System.out.println("Selected Sauce: " + sauce);
