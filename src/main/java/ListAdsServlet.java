@@ -4,11 +4,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
-@WebServlet("/profile")
-public class ViewProfileServlet extends HttpServlet {
+import java.util.List;
+@WebServlet ("/ads")
+public class ListAdsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/profile.jsp").forward(request, response);
+         Ads adsDao = DaoFactory.getAdsDao();
+         List<Ad> ads = adsDao.all();
+         request.setAttribute("ads", ads);
+         request.getRequestDispatcher("/ads/index.jsp").forward(request, response);
     }
 }
