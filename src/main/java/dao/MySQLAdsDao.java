@@ -6,6 +6,7 @@ import com.mysql.cj.jdbc.Driver;
 import dao.Ads;
 import models.Ad;
 
+import javax.servlet.ServletException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,6 +63,8 @@ public class MySQLAdsDao implements Ads {
                     return rs.getLong(1); // Return the generated ID
                 }
             }
+        } catch(SQLException e) {
+            e.printStackTrace();
         }
 
         return null; // Insertion failed
