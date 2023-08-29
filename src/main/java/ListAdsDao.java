@@ -1,10 +1,11 @@
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListAdsDao implements Ads {
     private List<Ad> ads;
 
-    public List<Ad> all() {
+    public List<Ad> all() throws SQLException {
         if (ads == null) {
             ads = generateAds();
         }
