@@ -1,3 +1,7 @@
+package dao;
+
+import dao.Ads;
+
 import java.sql.SQLException;
 
 public class DaoFactory {
